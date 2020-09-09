@@ -24,6 +24,7 @@ Function* CompilationUnit::find_function(const c10::QualifiedName& qn) {
   return nullptr;
 }
 
+//
 c10::IValue Module::run_method(const std::string& method_name, Stack stack) {
   auto observer = torch::observerConfig().getModuleObserver();
   auto module_metadata = metadata();

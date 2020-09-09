@@ -175,6 +175,7 @@ mobile::Module _load_data(
     observer->onEnterLoadModel();
   }
   try {
+    //
     auto reader = torch::make_unique<PyTorchStreamReader>(std::move(rai));
     BytecodeDeserializer deserializer(std::move(reader));
     auto mcu = std::make_shared<mobile::CompilationUnit>();
